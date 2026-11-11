@@ -12,15 +12,18 @@ AutoName: Nod
 
 RepoType: git
 Repo: https://github.com/ToTt0G/nod-stop-alarm.git
+Binaries: https://github.com/ToTt0G/nod-stop-alarm/releases/download/v%v/Nod-%v-foss.apk
 
 Builds:
   - versionName: 1.0.0
     versionCode: 1
-    commit: v1.0.0
+    commit: fe010eb35abd3580d322fc774881da4fe2738722
     subdir: app
     gradle:
       - foss
     output: build/outputs/apk/foss/release/app-foss-universal-release-unsigned.apk
+
+AllowedAPKSigningKeys: 243746e31f95556c2449110ac90595b5c04880f84dc3099bda7da411e227c8f3
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
