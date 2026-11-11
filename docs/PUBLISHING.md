@@ -53,4 +53,5 @@ Fastlane metadata in the repo (`fastlane/metadata/android/<locale>/`) feeds the 
 
 1. Bump `versionCode` and `versionName` in `app/build.gradle.kts`.
 2. Add `fastlane/metadata/android/<locale>/changelogs/<versionCode>.txt`.
-3. Tag, build both flavors, publish the GitHub Release. IzzyOnDroid and F-Droid follow the tag; Play needs a new AAB upload.
+3. Commit and tag, then build both flavors from a **fresh `git clone` of the tag** (not a worktree or a dirty tree, and with `keystore.properties` and the keystore copied in). The APK embeds the commit hash, and F-Droid is set up for reproducible builds: it rebuilds the tag and only publishes if its build matches `Nod-<version>-foss.apk` byte for byte, apart from the signature.
+4. Publish the GitHub Release with the same asset names (`Nod-<version>.apk`, `-arm64`, `-foss`, `-foss-arm64`). IzzyOnDroid and F-Droid follow the tag; Play needs a new AAB upload.
