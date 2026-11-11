@@ -1,12 +1,12 @@
 Categories:
   - Navigation
-  - Time
+  - Public Transport
 License: MIT
 AuthorName: ToTt0G
+WebSite: https://tott0g.github.io/nod-stop-alarm/
 SourceCode: https://github.com/ToTt0G/nod-stop-alarm
 IssueTracker: https://github.com/ToTt0G/nod-stop-alarm/issues
 Changelog: https://github.com/ToTt0G/nod-stop-alarm/releases
-WebSite: https://tott0g.github.io/nod-stop-alarm/
 
 AutoName: Nod
 
@@ -20,6 +20,7 @@ Builds:
     subdir: app
     gradle:
       - foss
+    output: build/outputs/apk/foss/release/app-foss-universal-release-unsigned.apk
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
