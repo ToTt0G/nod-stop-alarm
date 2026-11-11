@@ -1,0 +1,11 @@
+First release.
+
+- Search any station, stop or city worldwide, or draw your own zone
+- Wake on entering the zone or N minutes before arrival
+- Alarm, vibration only or silent, with a gentle volume ramp and a soft heads-up
+- Full-screen lock-screen alarm, slide to dismiss
+- Live Update on the lock screen and status bar (Android 16)
+- Headphone-aware alarm with a spoken heads-up
+- Widgets, Quick Settings tile and shortcuts
+- Zero battery when no trip is set
+- No account, no ads, no tracking

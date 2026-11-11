@@ -1,0 +1,11 @@
+Första versionen.
+
+- Sök station, hållplats eller stad i hela världen, eller rita en egen zon
+- Väck vid zonen eller ett valt antal minuter före ankomst
+- Larm, bara vibration eller tyst, med stigande volym och förvarning
+- Helskärmslarm på låsskärmen, svep för att stänga av
+- Live-uppdatering på låsskärm och statusfält (Android 16)
+- Hörlursanpassat larm med talad förvarning
+- Widgetar, snabbinställningsruta och genvägar
+- Noll batteri när ingen resa är satt
+- Inget konto, inga annonser

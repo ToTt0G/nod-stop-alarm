@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nod</string>
+    <string name="tagline">Nod off. We\'ll nudge you.</string>
+
+    <!-- General -->
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear">Clear</string>
+    <string name="remove">Remove</string>
+    <string name="retry">Try again</string>
+    <string name="save">Save place</string>
+    <string name="unsave">Remove from saved</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="allow">Allow</string>
+    <string name="preview">Preview</string>
+    <string name="open_settings">Open settings</string>
+    <string name="recommended">RECOMMENDED</string>
+    <string name="settings">Settings</string>
+    <string name="history">History</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="locating">Locating…</string>
+    <string name="now">Now</string>
+    <string name="minutes_short">%1$d min</string>
+
+    <!-- Home -->
+    <string name="greeting_morning">Good morning</string>
+    <string name="greeting_afternoon">Good afternoon</string>
+    <string name="greeting_evening">Good evening</string>
+    <string name="greeting_night">Late ride?</string>
+    <string name="home_title">Where are you\nheading?</string>
+    <string name="search_hint">Station, stop or city</string>
+    <string name="pick_on_map">Pick on map</string>
+    <string name="pick_on_map_hint">Drop a pin anywhere and draw your zone</string>
+    <string name="saved_places">Saved</string>
+    <string name="add_place">Add place</string>
+    <string name="recent">Recent</string>
+    <string name="see_all">See all</string>
+    <string name="zone_size">%1$s zone</string>
+    <string name="on_the_way">On the way</string>
+    <string name="alarm_in_short">Alarm in ~%1$s</string>
+    <string name="outcome_arrived">Arrived</string>
+    <string name="outcome_ended">Ended early</string>
+    <string name="footer_free">Free forever. No ads, no accounts, no tracking.</string>
+    <string name="remove_place_title">Remove saved place?</string>
+    <string name="remove_place_text">%1$s will be removed from your saved places.</string>
+    <string name="how_it_works">How it works</string>
+    <string name="step1_title">Pick your stop</string>
+    <string name="step1_text">Search a station, bus stop or city, or drop a pin.</string>
+    <string name="step2_title">Draw your zone</string>
+    <string name="step2_text">Stretch the circle, or wake up a few minutes before.</string>
+    <string name="step3_title">Doze off</string>
+    <string name="step3_text">Lock your phone. Nod wakes you when you\'re close.</string>
+
+    <!-- Search -->
+    <string name="filter_all">All</string>
+    <string name="kind_train">Train</string>
+    <string name="kind_metro">Metro</string>
+    <string name="kind_tram">Tram</string>
+    <string name="kind_bus">Bus</string>
+    <string name="kind_ferry">Ferry</string>
+    <string name="kind_city">City</string>
+    <string name="no_results_title">Nothing found</string>
+    <string name="no_results_text">No places match “%1$s”. Try another spelling, or drop a pin.</string>
+    <string name="search_error_title">Can\'t reach search</string>
+    <string name="search_error_text">Check your connection. You can still pick a spot on the map.</string>
+    <string name="search_tip">Tip: filter by Train or Bus to find stops faster. Results near you show up first.</string>
+
+    <!-- Zone -->
+    <string name="dropped_pin">Dropped pin</string>
+    <string name="finding_place">Finding this place…</string>
+    <string name="move_map_hint">Move the map to place your stop</string>
+    <string name="my_location">My location</string>
+    <string name="resize_zone">Drag to resize zone</string>
+    <string name="wake_me">Wake me</string>
+    <string name="trigger_zone">Entering zone</string>
+    <string name="trigger_time">Minutes before</string>
+    <string name="trigger_time_hint">Uses your live speed. The zone still acts as a safety net.</string>
+    <string name="zone_radius">Zone size</string>
+    <string name="style_alarm">Alarm</string>
+    <string name="style_vibrate">Vibrate</string>
+    <string name="style_silent">Silent</string>
+    <string name="start_trip">Start trip</string>
+    <string name="perm_location_title">Location needed</string>
+    <string name="perm_location_denied">Nod needs your location to know when you\'re close. It never leaves your phone. You can turn it on in Settings.</string>
+
+    <!-- Trip -->
+    <string name="minimize">Minimise</string>
+    <string name="heading_to">Heading to</string>
+    <string name="stat_alarm">Alarm</string>
+    <string name="stat_speed">Speed</string>
+    <string name="stat_zone">Zone</string>
+    <string name="on_entry">On entry</string>
+    <string name="min_before">%1$d min before</string>
+    <string name="status_locating">Finding you</string>
+    <string name="status_tracking">Watching your trip</string>
+    <string name="status_heads_up">Almost there</string>
+    <string name="status_arrived">Arrived</string>
+    <string name="trip_hint">Lock your phone and rest. Nod will wake you.</string>
+    <string name="hold_to_end">Hold to end trip</string>
+    <string name="keep_holding">Keep holding…</string>
+    <string name="warn_full_screen">Allow full-screen alarms so Nod can wake you on the lock screen.</string>
+    <string name="warn_battery">Let Nod run unrestricted so your phone doesn\'t pause it mid-trip.</string>
+
+    <!-- Alarm -->
+    <string name="alarm_label">Wake up</string>
+    <string name="alarm_preview_label">Alarm preview</string>
+    <string name="alarm_title">You\'re almost at\n%1$s</string>
+    <string name="alarm_distance">%1$s to go</string>
+    <string name="slide_awake">Slide — I\'m awake</string>
+    <string name="volume_hint">Volume key silences the sound</string>
+    <string name="silenced">Sound off. Slide when you\'re ready.</string>
+    <string name="preview_place">your stop</string>
+
+    <!-- Onboarding -->
+    <string name="onb1_title">Nod off.\nWe\'ll nudge you.</string>
+    <string name="onb1_text">Set your stop, then relax. Nod wakes you right before you arrive — on trains, buses, trams and ferries.</string>
+    <string name="onb2_title">Draw your zone</string>
+    <string name="onb2_text">Pick a station or drop a pin, then stretch the circle. The moment you enter it, your phone wakes you.</string>
+    <string name="onb3_title">Alarm, buzz or both</string>
+    <string name="onb3_text">A rising alarm for deep sleepers, a gentle buzz for the quiet carriage. Your call, every trip.</string>
+    <string name="onb4_title">Almost ready</string>
+    <string name="onb4_text">Nod works fully on your phone. Your location is never uploaded or stored anywhere else.</string>
+    <string name="get_started">Get started</string>
+    <string name="perm_location">Location</string>
+    <string name="perm_location_why">To know when you\'re close to your stop</string>
+    <string name="perm_notifications">Notifications</string>
+    <string name="perm_notifications_why">To show your trip and ring the alarm</string>
+    <string name="perm_live_updates">Live Updates</string>
+    <string name="perm_live_updates_why">Your trip on the lock screen, always-on display and status bar</string>
+    <string name="perm_full_screen">Full-screen alarm</string>
+    <string name="perm_full_screen_why">To wake you even when your phone is locked</string>
+    <string name="perm_battery">Unrestricted battery</string>
+    <string name="perm_battery_why">So long trips aren\'t paused by power saving</string>
+
+    <!-- Settings -->
+    <string name="section_alerts">Alerts</string>
+    <string name="section_appearance">Appearance</string>
+    <string name="section_reliability">Reliability</string>
+    <string name="section_about">About</string>
+    <string name="default_alert">Default alert</string>
+    <string name="alarm_sound">Alarm sound</string>
+    <string name="default_sound">Default alarm</string>
+    <string name="vibration">Vibration</string>
+    <string name="vibration_hint">Tap to feel each pattern</string>
+    <string name="vib_pulse">Pulse</string>
+    <string name="vib_heartbeat">Heartbeat</string>
+    <string name="vib_wave">Wave</string>
+    <string name="vib_urgent">Urgent</string>
+    <string name="gradual_volume">Gentle wake-up</string>
+    <string name="gradual_volume_hint">Alarm volume rises over 20 seconds</string>
+    <string name="heads_up">Heads-up nudge</string>
+    <string name="heads_up_hint">A short buzz about 2 minutes before</string>
+    <string name="try_alarm">Try the alarm</string>
+    <string name="theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="units">Units</string>
+    <string name="units_metric">Kilometres</string>
+    <string name="units_imperial">Miles</string>
+    <string name="status_on">On</string>
+    <string name="status_fix">Fix</string>
+    <string name="about_free">Nod is free, without ads, accounts or tracking. Your trips stay on your phone.</string>
+    <string name="about_credits">Map data © OpenStreetMap contributors. Map tiles by OpenFreeMap. Search by Photon (komoot). Maps rendered with MapLibre.</string>
+
+    <!-- History -->
+    <string name="clear_history">Clear history</string>
+    <string name="clear_history_text">All past trips will be removed. Saved places stay.</string>
+    <string name="history_empty_title">No trips yet</string>
+    <string name="history_empty_text">Your journeys will show up here.</string>
+
+    <!-- Notifications -->
+    <string name="channel_trip">Trip in progress</string>
+    <string name="channel_trip_desc">Live distance to your stop while Nod watches your trip</string>
+    <string name="channel_heads_up">Almost there</string>
+    <string name="channel_heads_up_desc">A heads-up shortly before your stop</string>
+    <string name="channel_alarm">Arrival alarm</string>
+    <string name="channel_alarm_desc">Wakes you when you reach your zone</string>
+    <string name="notif_heading_to">Heading to %1$s</string>
+    <string name="notif_locating">Finding your location…</string>
+    <string name="notif_distance_to">%1$s to %2$s</string>
+    <string name="notif_alarm_in">Alarm in about %1$s</string>
+    <string name="notif_waiting_zone">Alarm when you enter the zone</string>
+    <string name="notif_waiting_time">Alarm %1$d min before arriving</string>
+    <string name="notif_in_zone">You\'re in the zone</string>
+    <string name="notif_arrived">You\'ve arrived. Wake up!</string>
+    <string name="notif_heads_up_title">Almost at %1$s</string>
+    <string name="notif_heads_up_text">About 2 minutes to go. Time to gather your things.</string>
+    <string name="notif_alarm_title">Wake up — you\'re nearly at %1$s</string>
+    <string name="notif_alarm_text">%1$s to go</string>
+    <string name="action_end_trip">End trip</string>
+    <string name="action_awake">I\'m awake</string>
+    <string name="tile_idle">No trip running</string>
+
+    <!-- Notifications: Live Update extras -->
+    <string name="kind_place">Place</string>
+    <string name="chip_locating">GPS…</string>
+    <string name="action_up_end">I\'m up — end trip</string>
+    <string name="channel_done">Trip summaries</string>
+    <string name="channel_done_desc">A short recap when a trip ends</string>
+    <string name="summary_arrived">Arrived at %1$s</string>
+    <string name="summary_ended">Trip to %1$s ended</string>
+    <string name="saved_toast">%1$s saved</string>
+
+    <!-- Widgets & shortcuts -->
+    <string name="widget_journey_name">Journey</string>
+    <string name="widget_journey_desc">Live distance to your stop, or one-tap trips to saved places</string>
+    <string name="widget_ring_name">Nod ring</string>
+    <string name="widget_ring_desc">A ring that closes as you approach your stop</string>
+    <string name="widget_quick_name">Quick stop</string>
+    <string name="widget_quick_desc">Start a trip to one saved place with a single tap</string>
+    <string name="widget_where_to">Where to?</string>
+    <string name="widget_no_saved">Save a place in Nod for one-tap trips from here.</string>
+    <string name="widget_end">End</string>
+    <string name="widget_pick_place">Tap to set up</string>
+    <string name="widget_tap_to_start">Tap to wake me there</string>
+    <string name="widget_config_title">Choose a stop</string>
+    <string name="widget_config_text">This widget will start a trip to it with one tap.</string>
+    <string name="widget_open_app">Open Nod</string>
+    <string name="shortcut_search">Where to?</string>
+    <string name="shortcut_wake_at">Wake me at %1$s</string>
+    <string name="section_widgets">Widgets</string>
+    <string name="widget_add">Add</string>
+    <string name="widget_pin_unsupported">Long-press your home screen and choose Widgets to add Nod.</string>
+
+    <!-- Headphones -->
+    <string name="audio_headphones_only">Alarm in headphones only</string>
+    <string name="audio_headphones_only_hint">Wake me in my headphones, not out loud</string>
+    <string name="audio_speak">Speak over my music</string>
+    <string name="audio_speak_hint">A short spoken heads-up while you listen</string>
+    <string name="audio_earbuds_hint">Or press play on your earbuds</string>
+    <!-- Spoken aloud by text-to-speech. %1$s is the stop name. -->
+    <string name="audio_speak_heads_up">%1$s in about 2 minutes.</string>
+    <string name="audio_speak_alarm">Wake up, you\'re arriving at %1$s.</string>
+    <!-- Language of the spoken lines above (BCP 47), so the voice matches the words. -->
+    <string name="audio_speech_lang">en</string>
+
+    <!-- Map sheet -->
+    <string name="map_sheet_handle">Panel handle</string>
+    <string name="map_sheet_expanded">Expanded</string>
+    <string name="map_sheet_collapsed">Collapsed</string>
+    <string name="map_expand">Show details</string>
+    <string name="map_collapse">Show more of the map</string>
+    <string name="map_fit_zone">Fit zone</string>
+    <string name="map_recenter">Recenter</string>
+    <!-- %1$s is a distance such as "500 m". -->
+    <string name="map_zone_radius">Zone %1$s</string>
+    <!-- %1$s is the place name, %2$s the zone radius. -->
+    <string name="map_peek_zone">%1$s, zone %2$s</string>
+    <string name="map_trip_details">Show trip details</string>
+    <!-- %1$s is e.g. "~4 min" or "On entry". -->
+    <string name="map_alarm_eta">Alarm: %1$s</string>
+    <!-- %1$s is the distance left, %2$s the alarm estimate. -->
+    <string name="map_peek_trip">%1$s to go, alarm: %2$s</string>
+    <!-- One-time GitHub star card on Home, and the permanent row in Settings → About. -->
+    <string name="star_title">Has Nod got you there?</string>
+    <string name="star_body">Nod is free and open source. A star on GitHub helps other commuters find it.</string>
+    <string name="star_action">Star on GitHub</string>
+    <string name="star_not_now">Not now</string>
+    <string name="star_settings_title">Star Nod on GitHub</string>
+    <string name="star_settings_subtitle">Free &amp; open source</string>
+</resources>

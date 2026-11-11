@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Slumra lugnt. Vi väcker dig.</string>
+
+    <!-- Allmänt -->
+    <string name="back">Tillbaka</string>
+    <string name="cancel">Avbryt</string>
+    <string name="clear">Rensa</string>
+    <string name="remove">Ta bort</string>
+    <string name="retry">Försök igen</string>
+    <string name="save">Spara plats</string>
+    <string name="unsave">Ta bort från sparade</string>
+    <string name="next">Nästa</string>
+    <string name="skip">Hoppa över</string>
+    <string name="allow">Tillåt</string>
+    <string name="preview">Förhandslyssna</string>
+    <string name="open_settings">Öppna inställningar</string>
+    <string name="recommended">REKOMMENDERAS</string>
+    <string name="settings">Inställningar</string>
+    <string name="history">Historik</string>
+    <string name="today">Idag</string>
+    <string name="yesterday">Igår</string>
+    <string name="locating">Söker position…</string>
+    <string name="now">Nu</string>
+    <string name="minutes_short">%1$d min</string>
+
+    <!-- Hem -->
+    <string name="greeting_morning">God morgon</string>
+    <string name="greeting_afternoon">God eftermiddag</string>
+    <string name="greeting_evening">God kväll</string>
+    <string name="greeting_night">Sen resa?</string>
+    <string name="home_title">Vart är du\npå väg?</string>
+    <string name="search_hint">Station, hållplats eller stad</string>
+    <string name="pick_on_map">Välj på kartan</string>
+    <string name="pick_on_map_hint">Släpp en nål var som helst och rita din zon</string>
+    <string name="saved_places">Sparade</string>
+    <string name="add_place">Lägg till</string>
+    <string name="recent">Senaste</string>
+    <string name="see_all">Visa alla</string>
+    <string name="zone_size">%1$s zon</string>
+    <string name="on_the_way">På väg</string>
+    <string name="alarm_in_short">Larm om ~%1$s</string>
+    <string name="outcome_arrived">Framme</string>
+    <string name="outcome_ended">Avslutad tidigt</string>
+    <string name="footer_free">Gratis för alltid. Inga annonser, inga konton, ingen spårning.</string>
+    <string name="remove_place_title">Ta bort sparad plats?</string>
+    <string name="remove_place_text">%1$s tas bort från dina sparade platser.</string>
+    <string name="how_it_works">Så funkar det</string>
+    <string name="step1_title">Välj din hållplats</string>
+    <string name="step1_text">Sök en station, busshållplats eller stad, eller släpp en nål.</string>
+    <string name="step2_title">Rita din zon</string>
+    <string name="step2_text">Dra ut cirkeln, eller bli väckt några minuter innan.</string>
+    <string name="step3_title">Slumra</string>
+    <string name="step3_text">Lås telefonen. Nod väcker dig när du är nära.</string>
+
+    <!-- Sök -->
+    <string name="filter_all">Alla</string>
+    <string name="kind_train">Tåg</string>
+    <string name="kind_metro">Tunnelbana</string>
+    <string name="kind_tram">Spårvagn</string>
+    <string name="kind_bus">Buss</string>
+    <string name="kind_ferry">Färja</string>
+    <string name="kind_city">Stad</string>
+    <string name="no_results_title">Inget hittades</string>
+    <string name="no_results_text">Inga platser matchar ”%1$s”. Prova en annan stavning, eller släpp en nål.</string>
+    <string name="search_error_title">Sökningen svarar inte</string>
+    <string name="search_error_text">Kontrollera anslutningen. Du kan fortfarande välja en plats på kartan.</string>
+    <string name="search_tip">Tips: filtrera på Tåg eller Buss för att hitta hållplatser snabbare. Resultat nära dig visas först.</string>
+
+    <!-- Zon -->
+    <string name="dropped_pin">Utsläppt nål</string>
+    <string name="finding_place">Letar upp platsen…</string>
+    <string name="move_map_hint">Flytta kartan för att placera din hållplats</string>
+    <string name="my_location">Min position</string>
+    <string name="resize_zone">Dra för att ändra zonens storlek</string>
+    <string name="wake_me">Väck mig</string>
+    <string name="trigger_zone">Vid zonen</string>
+    <string name="trigger_time">Minuter innan</string>
+    <string name="trigger_time_hint">Använder din aktuella hastighet. Zonen finns kvar som skyddsnät.</string>
+    <string name="zone_radius">Zonens storlek</string>
+    <string name="style_alarm">Larm</string>
+    <string name="style_vibrate">Vibration</string>
+    <string name="style_silent">Tyst</string>
+    <string name="start_trip">Starta resan</string>
+    <string name="perm_location_title">Plats behövs</string>
+    <string name="perm_location_denied">Nod behöver din plats för att veta när du är nära. Den lämnar aldrig telefonen. Du kan slå på den i Inställningar.</string>
+
+    <!-- Resa -->
+    <string name="minimize">Minimera</string>
+    <string name="heading_to">På väg till</string>
+    <string name="stat_alarm">Larm</string>
+    <string name="stat_speed">Hastighet</string>
+    <string name="stat_zone">Zon</string>
+    <string name="on_entry">Vid zonen</string>
+    <string name="min_before">%1$d min innan</string>
+    <string name="status_locating">Söker dig</string>
+    <string name="status_tracking">Följer din resa</string>
+    <string name="status_heads_up">Snart framme</string>
+    <string name="status_arrived">Framme</string>
+    <string name="trip_hint">Lås telefonen och vila. Nod väcker dig.</string>
+    <string name="hold_to_end">Håll in för att avsluta</string>
+    <string name="keep_holding">Fortsätt hålla…</string>
+    <string name="warn_full_screen">Tillåt helskärmslarm så att Nod kan väcka dig på låsskärmen.</string>
+    <string name="warn_battery">Låt Nod köras obegränsat så att telefonen inte pausar resan.</string>
+
+    <!-- Larm -->
+    <string name="alarm_label">Vakna</string>
+    <string name="alarm_preview_label">Förhandsvisning</string>
+    <string name="alarm_title">Du är snart vid\n%1$s</string>
+    <string name="alarm_distance">%1$s kvar</string>
+    <string name="slide_awake">Dra — jag är vaken</string>
+    <string name="volume_hint">Volymknappen stänger av ljudet</string>
+    <string name="silenced">Ljudet är av. Dra när du är redo.</string>
+    <string name="preview_place">din hållplats</string>
+
+    <!-- Introduktion -->
+    <string name="onb1_title">Slumra lugnt.\nVi väcker dig.</string>
+    <string name="onb1_text">Välj din hållplats och slappna av. Nod väcker dig precis innan du är framme — på tåg, buss, spårvagn och färja.</string>
+    <string name="onb2_title">Rita din zon</string>
+    <string name="onb2_text">Välj en station eller släpp en nål och dra ut cirkeln. När du åker in i den väcker telefonen dig.</string>
+    <string name="onb3_title">Larm, vibration eller båda</string>
+    <string name="onb3_text">Ett stigande larm för djupsovare, en mjuk vibration för den tysta vagnen. Du väljer, varje resa.</string>
+    <string name="onb4_title">Nästan klart</string>
+    <string name="onb4_text">Nod fungerar helt på din telefon. Din plats laddas aldrig upp eller sparas någon annanstans.</string>
+    <string name="get_started">Kom igång</string>
+    <string name="perm_location">Plats</string>
+    <string name="perm_location_why">För att veta när du närmar dig hållplatsen</string>
+    <string name="perm_notifications">Aviseringar</string>
+    <string name="perm_notifications_why">För att visa resan och ringa larmet</string>
+    <string name="perm_live_updates">Liveuppdateringar</string>
+    <string name="perm_live_updates_why">Din resa på låsskärmen, alltid på-skärmen och i statusfältet</string>
+    <string name="perm_full_screen">Helskärmslarm</string>
+    <string name="perm_full_screen_why">För att väcka dig även när telefonen är låst</string>
+    <string name="perm_battery">Obegränsat batteri</string>
+    <string name="perm_battery_why">Så att långa resor inte pausas av energisparläget</string>
+
+    <!-- Inställningar -->
+    <string name="section_alerts">Larm</string>
+    <string name="section_appearance">Utseende</string>
+    <string name="section_reliability">Tillförlitlighet</string>
+    <string name="section_about">Om</string>
+    <string name="default_alert">Standardlarm</string>
+    <string name="alarm_sound">Larmljud</string>
+    <string name="default_sound">Standardlarm</string>
+    <string name="vibration">Vibration</string>
+    <string name="vibration_hint">Tryck för att känna varje mönster</string>
+    <string name="vib_pulse">Puls</string>
+    <string name="vib_heartbeat">Hjärtslag</string>
+    <string name="vib_wave">Våg</string>
+    <string name="vib_urgent">Akut</string>
+    <string name="gradual_volume">Mjuk väckning</string>
+    <string name="gradual_volume_hint">Larmvolymen stiger under 20 sekunder</string>
+    <string name="heads_up">Förvarning</string>
+    <string name="heads_up_hint">En kort vibration ungefär 2 minuter innan</string>
+    <string name="try_alarm">Testa larmet</string>
+    <string name="theme">Tema</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Ljust</string>
+    <string name="theme_dark">Mörkt</string>
+    <string name="units">Enheter</string>
+    <string name="units_metric">Kilometer</string>
+    <string name="units_imperial">Miles</string>
+    <string name="status_on">På</string>
+    <string name="status_fix">Åtgärda</string>
+    <string name="about_free">Nod är gratis, utan annonser, konton eller spårning. Dina resor stannar på telefonen.</string>
+    <string name="about_credits">Kartdata © OpenStreetMap-bidragsgivare. Kartplattor från OpenFreeMap. Sökning via Photon (komoot). Kartor renderas med MapLibre.</string>
+
+    <!-- Historik -->
+    <string name="clear_history">Rensa historik</string>
+    <string name="clear_history_text">Alla tidigare resor tas bort. Sparade platser finns kvar.</string>
+    <string name="history_empty_title">Inga resor än</string>
+    <string name="history_empty_text">Dina resor dyker upp här.</string>
+
+    <!-- Aviseringar -->
+    <string name="channel_trip">Pågående resa</string>
+    <string name="channel_trip_desc">Avstånd till hållplatsen medan Nod följer resan</string>
+    <string name="channel_heads_up">Snart framme</string>
+    <string name="channel_heads_up_desc">En förvarning strax innan din hållplats</string>
+    <string name="channel_alarm">Ankomstlarm</string>
+    <string name="channel_alarm_desc">Väcker dig när du når din zon</string>
+    <string name="notif_heading_to">På väg till %1$s</string>
+    <string name="notif_locating">Söker din position…</string>
+    <string name="notif_distance_to">%1$s till %2$s</string>
+    <string name="notif_alarm_in">Larm om ungefär %1$s</string>
+    <string name="notif_waiting_zone">Larm när du åker in i zonen</string>
+    <string name="notif_waiting_time">Larm %1$d min före ankomst</string>
+    <string name="notif_in_zone">Du är i zonen</string>
+    <string name="notif_arrived">Du är framme. Vakna!</string>
+    <string name="notif_heads_up_title">Snart vid %1$s</string>
+    <string name="notif_heads_up_text">Ungefär 2 minuter kvar. Dags att plocka ihop dina saker.</string>
+    <string name="notif_alarm_title">Vakna — du är snart vid %1$s</string>
+    <string name="notif_alarm_text">%1$s kvar</string>
+    <string name="action_end_trip">Avsluta resa</string>
+    <string name="action_awake">Jag är vaken</string>
+    <string name="tile_idle">Ingen resa pågår</string>
+
+    <!-- Aviseringar: Live Update -->
+    <string name="kind_place">Plats</string>
+    <string name="chip_locating">GPS…</string>
+    <string name="action_up_end">Jag är vaken — avsluta</string>
+    <string name="channel_done">Resesammanfattningar</string>
+    <string name="channel_done_desc">En kort sammanfattning när en resa slutar</string>
+    <string name="summary_arrived">Framme vid %1$s</string>
+    <string name="summary_ended">Resan till %1$s avslutades</string>
+    <string name="saved_toast">%1$s sparad</string>
+
+    <!-- Widgetar och genvägar -->
+    <string name="widget_journey_name">Resa</string>
+    <string name="widget_journey_desc">Avstånd till hållplatsen, eller resor med ett tryck till sparade platser</string>
+    <string name="widget_ring_name">Nod-ring</string>
+    <string name="widget_ring_desc">En ring som sluts när du närmar dig hållplatsen</string>
+    <string name="widget_quick_name">Snabbhållplats</string>
+    <string name="widget_quick_desc">Starta en resa till en sparad plats med ett tryck</string>
+    <string name="widget_where_to">Vart?</string>
+    <string name="widget_no_saved">Spara en plats i Nod för resor med ett tryck härifrån.</string>
+    <string name="widget_end">Avsluta</string>
+    <string name="widget_pick_place">Tryck för att välja</string>
+    <string name="widget_tap_to_start">Tryck så väcker vi dig där</string>
+    <string name="widget_config_title">Välj en hållplats</string>
+    <string name="widget_config_text">Widgeten startar en resa dit med ett tryck.</string>
+    <string name="widget_open_app">Öppna Nod</string>
+    <string name="shortcut_search">Vart?</string>
+    <string name="shortcut_wake_at">Väck mig vid %1$s</string>
+    <string name="section_widgets">Widgetar</string>
+    <string name="widget_add">Lägg till</string>
+    <string name="widget_pin_unsupported">Håll inne på hemskärmen och välj Widgetar för att lägga till Nod.</string>
+
+    <!-- Hörlurar -->
+    <string name="audio_headphones_only">Larm bara i hörlurarna</string>
+    <string name="audio_headphones_only_hint">Väck mig i hörlurarna, inte i högtalaren</string>
+    <string name="audio_speak">Prata över musiken</string>
+    <string name="audio_speak_hint">En kort uppläst förvarning medan du lyssnar</string>
+    <string name="audio_earbuds_hint">Eller tryck på play på hörlurarna</string>
+    <string name="audio_speak_heads_up">%1$s om ungefär 2 minuter.</string>
+    <string name="audio_speak_alarm">Vakna, du är snart framme vid %1$s.</string>
+    <string name="audio_speech_lang">sv</string>
+
+    <!-- Kartpanel -->
+    <string name="map_sheet_handle">Panelens handtag</string>
+    <string name="map_sheet_expanded">Utfälld</string>
+    <string name="map_sheet_collapsed">Hopfälld</string>
+    <string name="map_expand">Visa detaljer</string>
+    <string name="map_collapse">Visa mer av kartan</string>
+    <string name="map_fit_zone">Visa hela zonen</string>
+    <string name="map_recenter">Centrera</string>
+    <string name="map_zone_radius">Zon %1$s</string>
+    <string name="map_peek_zone">%1$s, zon %2$s</string>
+    <string name="map_trip_details">Visa resans detaljer</string>
+    <string name="map_alarm_eta">Larm: %1$s</string>
+    <string name="map_peek_trip">%1$s kvar, larm: %2$s</string>
+    <string name="star_title">Har Nod fått dig fram?</string>
+    <string name="star_body">Nod är gratis och har öppen källkod. En stjärna på GitHub hjälper andra pendlare att hitta appen.</string>
+    <string name="star_action">Ge en stjärna</string>
+    <string name="star_not_now">Inte nu</string>
+    <string name="star_settings_title">Ge Nod en stjärna på GitHub</string>
+    <string name="star_settings_subtitle">Gratis och öppen källkod</string>
+</resources>

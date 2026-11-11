@@ -1,0 +1,44 @@
+Doze off. Nod wakes you before your stop.
+
+Nod is a free, open-source stop alarm for train, bus, tram, metro and ferry rides. Pick your destination, close your eyes, and Nod wakes you a few minutes before you arrive. It's a GPS location alarm built for one job: making sure you never miss your stop again.
+
+PICK YOUR STOP
+- Search any station, stop or city worldwide (OpenStreetMap data).
+- Or drop a pin on the map and drag the zone from 100 m to 20 km.
+- Saved places and history let you start a trip in one tap.
+
+WAKES YOU RIGHT ON TIME
+- Wake on entering the zone, or a set number of minutes before arrival based on your live speed.
+- Alarm, vibration only, or silent. The volume ramps up gently.
+- A soft heads-up about 2 minutes before the real alarm.
+- A full-screen alarm over the lock screen with slide to dismiss.
+
+LIVE ON YOUR LOCK SCREEN
+- On Android 16, the Live Update shows your distance and ETA on the lock screen and always-on display, with a status-bar chip and an End trip button.
+- On older Android versions, a regular ongoing notification keeps you informed.
+
+HEADPHONES IN? NO PROBLEM
+- The alarm plays only in your ears and your music pauses.
+- A spoken heads-up plays over your music.
+- Press the earbud button to say "I'm awake".
+
+WIDGETS AND SHORTCUTS
+- Journey, Ring and Quick stop widgets update live during a trip, also on the lock screen where supported.
+- A Quick Settings tile and launcher shortcuts for your favourite stops.
+
+ZERO BATTERY WHEN IDLE
+- No trip set means no background services, alarms, jobs or location use.
+- During a trip, Nod checks your location adaptively: every few minutes via Wi-Fi/cell positioning when you're far away, then GPS only in the final stretch.
+- Widgets render with no background jobs.
+
+PRIVATE BY DESIGN
+- No account, no ads, no tracking, no analytics.
+- Your location never leaves your phone.
+- The only network use is place search and map tiles.
+- Open source under the MIT license.
+
+Nod works for commuters who nap on the train, night bus riders, long-distance travellers and anyone who gets lost in a book or a podcast. Set a destination alarm once and relax until your stop.
+
+Available in English and Swedish. Requires Android 8.0 or later. Lock-screen Live Updates need Android 16.
+
+Source code: https://github.com/ToTt0G/nod-stop-alarm

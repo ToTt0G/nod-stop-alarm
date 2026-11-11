@@ -1,0 +1,27 @@
+Categories:
+  - Navigation
+  - Time
+License: MIT
+AuthorName: ToTt0G
+SourceCode: https://github.com/ToTt0G/nod-stop-alarm
+IssueTracker: https://github.com/ToTt0G/nod-stop-alarm/issues
+Changelog: https://github.com/ToTt0G/nod-stop-alarm/releases
+WebSite: https://tott0g.github.io/nod-stop-alarm/
+
+AutoName: Nod
+
+RepoType: git
+Repo: https://github.com/ToTt0G/nod-stop-alarm.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: v1.0.0
+    subdir: app
+    gradle:
+      - foss
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 1

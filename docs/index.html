@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nod: Stop Alarm for Android. Wakes you before your train or bus stop</title>
+<meta name="description" content="Nod is a free, open-source stop alarm for Android. A GPS location alarm that wakes you before your train, bus or metro stop. Zero battery when idle, no account, no ads, no tracking.">
+<link rel="canonical" href="https://tott0g.github.io/nod-stop-alarm/">
+<meta name="theme-color" content="#0E0F11">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nod">
+<meta property="og:title" content="Nod: Stop Alarm. Doze off, wake up before your stop">
+<meta property="og:description" content="Free, open-source location alarm for Android. Pick your train or bus stop, close your eyes, and Nod wakes you a few minutes before you arrive. Zero battery when idle. No account, no ads, no tracking.">
+<meta property="og:url" content="https://tott0g.github.io/nod-stop-alarm/">
+<meta property="og:image" content="https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/docs/images/feature.png">
+<meta property="og:image:alt" content="Nod: a stop alarm that wakes you before your stop">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nod: Stop Alarm. Doze off, wake up before your stop">
+<meta name="twitter:description" content="Free, open-source GPS stop alarm for Android. Wakes you before your train or bus stop. Zero battery when idle, no tracking.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/docs/images/feature.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Nod: Stop Alarm",
+      "alternateName": "Nod",
+      "applicationCategory": "TravelApplication",
+      "applicationSubCategory": "Location alarm",
+      "operatingSystem": "Android 8.0+",
+      "url": "https://tott0g.github.io/nod-stop-alarm/",
+      "downloadUrl": "https://github.com/ToTt0G/nod-stop-alarm/releases/latest",
+      "installUrl": "https://github.com/ToTt0G/nod-stop-alarm/releases/latest",
+      "softwareVersion": "1.0.0",
+      "license": "https://opensource.org/licenses/MIT",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "image": "https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/docs/images/feature.png",
+      "screenshot": [
+        "https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/fastlane/metadata/android/en-US/images/phoneScreenshots/01.png",
+        "https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/fastlane/metadata/android/en-US/images/phoneScreenshots/02.png",
+        "https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/fastlane/metadata/android/en-US/images/phoneScreenshots/03.png",
+        "https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/fastlane/metadata/android/en-US/images/phoneScreenshots/04.png"
+      ],
+      "description": "A free, open-source stop alarm for Android. A GPS location alarm that wakes you before your train, bus, tram, metro or ferry stop. Search any station worldwide or draw your own zone. Zero battery when idle. No account, no ads, no tracking.",
+      "featureList": [
+        "Search any station, stop or city worldwide, or draw a zone from 100 m to 20 km",
+        "Wake on entering the zone or N minutes before arrival",
+        "Alarm, vibration only or silent, with a gentle volume ramp and a soft heads-up",
+        "Full-screen lock-screen alarm with slide to dismiss",
+        "Android 16 Live Update on the lock screen and always-on display",
+        "Headphone-aware alarm with spoken heads-up",
+        "Journey, Ring and Quick stop widgets, Quick Settings tile and shortcuts",
+        "Zero battery when no trip is set",
+        "No account, no ads, no tracking, no analytics"
+      ],
+      "inLanguage": ["en", "sv"],
+      "codeRepository": "https://github.com/ToTt0G/nod-stop-alarm"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there an app that wakes me up at my bus stop?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Nod is a free Android stop alarm. Search your bus stop or station, start the trip, and Nod wakes you when you enter the zone around the stop or a set number of minutes before you arrive. It works for buses, trains, trams, metros and ferries." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does a train stop alarm work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nod checks your location during the trip and compares it with the stop you picked. Far from the stop it checks every few minutes using Wi-Fi and cell positioning; in the final stretch it switches to GPS. When you enter the zone, or when your live speed says you are N minutes away, it rings a full-screen alarm over the lock screen, with a soft heads-up about two minutes earlier." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Nod a GPS destination alarm for any location, not just stations?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can search any station, stop or city worldwide, or drop a pin anywhere on the map and drag the alarm zone from 100 m to 20 km. It works as a general location alarm for Android." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I still wake up if I fall asleep on the train with headphones in?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. With headphones connected, the alarm plays only in your ears and your music pauses. A spoken heads-up plays over your music before the alarm, and pressing the earbud button tells Nod you are awake." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a location alarm drain the battery?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nod uses zero battery when no trip is set: no background services, alarms, jobs or location. During a trip it checks location adaptively, every few minutes via Wi-Fi and cell when far away, and GPS only in the final stretch. Widgets render with no background jobs." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Nod track me or need an account?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. There is no account, no ads, no tracking and no analytics. Your location never leaves the phone. The only network use is place search (Photon, OpenStreetMap data) and map tiles (OpenFreeMap). The code is open source under the MIT license." }
+        },
+        {
+          "@type": "Question",
+          "name": "Finns det en väckarklocka för hållplatsen på Android?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja. Nod är ett gratis hållplatsalarm med öppen källkod för Android. Sök din station eller hållplats, starta resan och somna. Nod väcker dig när du kommer in i zonen eller ett valt antal minuter före ankomst. Appen finns på svenska och engelska, använder noll batteri när ingen resa är satt och skickar aldrig din position någonstans." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I download Nod?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Download the APK from GitHub Releases at github.com/ToTt0G/nod-stop-alarm/releases. F-Droid, IzzyOnDroid and Google Play listings are planned. Nod requires Android 8.0 or later; lock-screen Live Updates need Android 16." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --ink: #0E0F11;
+    --ink-2: #16181B;
+    --ink-3: #1F2226;
+    --line: #2A2E33;
+    --text: #ECEDEF;
+    --muted: #9AA0A8;
+    --lime: #C8F55A;
+    --lime-ink: #0E0F11;
+    --radius: 16px;
+    --max: 1080px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--lime); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0; }
+  h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 700; }
+  h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 0.75rem; }
+  h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+  p { margin: 0 0 1rem; }
+  .muted { color: var(--muted); }
+  section { padding: 72px 0; }
+  section + section { border-top: 1px solid var(--line); }
+
+  header.top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; font-size: 1.1rem; }
+  .brand .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--lime); }
+  nav.links { display: flex; gap: 20px; font-size: 0.95rem; }
+  nav.links a { color: var(--muted); }
+  nav.links a:hover { color: var(--text); text-decoration: none; }
+
+  .hero { padding: 48px 0 24px; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+  .eyebrow { color: var(--lime); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+  .lead { font-size: 1.2rem; color: var(--muted); max-width: 32rem; margin-top: 18px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 22px; border-radius: 999px; font-weight: 600; font-size: 1rem;
+    border: 1px solid transparent; transition: transform .12s ease, background .12s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); }
+  .btn-primary { background: var(--lime); color: var(--lime-ink); }
+  .btn-primary:hover { background: #D6FF72; }
+  .btn-ghost { background: transparent; color: var(--text); border-color: var(--line); }
+  .btn-ghost:hover { border-color: var(--muted); }
+  .btn svg { width: 18px; height: 18px; fill: currentColor; }
+  .fine { font-size: 0.85rem; color: var(--muted); margin-top: 14px; }
+  .hero-img { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--ink-2); }
+
+  .shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+  .shot { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--ink-2); }
+  .shot figcaption { padding: 10px 14px; font-size: 0.9rem; color: var(--muted); }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 32px; }
+  .card { background: var(--ink-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .card .ic { width: 36px; height: 36px; border-radius: 10px; background: var(--ink-3); display: grid; place-items: center; margin-bottom: 14px; }
+  .card .ic svg { width: 20px; height: 20px; stroke: var(--lime); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .card p { color: var(--muted); font-size: 0.97rem; margin: 0; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 32px; }
+  .panel { background: var(--ink-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+  .panel h3 { font-size: 1.3rem; margin-bottom: 12px; }
+  .panel ul { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+  .panel li { margin-bottom: 8px; }
+  .panel li strong { color: var(--text); font-weight: 600; }
+  .stat { font-size: 2.6rem; font-weight: 700; color: var(--lime); letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
+
+  .faq details { border-top: 1px solid var(--line); padding: 18px 0; }
+  .faq details:last-child { border-bottom: 1px solid var(--line); }
+  .faq summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--lime); font-weight: 400; flex: none; }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { color: var(--muted); margin: 12px 0 0; max-width: 60rem; }
+
+  footer { padding: 40px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: center; }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--lime); }
+
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .shots { grid-template-columns: 1fr 1fr; }
+    .two { grid-template-columns: 1fr; }
+    nav.links { display: none; }
+    section { padding: 56px 0; }
+  }
+  @media (max-width: 520px) {
+    .grid { grid-template-columns: 1fr; }
+    body { font-size: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top" aria-label="Nod home"><span class="dot" aria-hidden="true"></span>Nod</a>
+    <nav class="links" aria-label="Page sections">
+      <a href="#features">Features</a>
+      <a href="#battery">Battery &amp; privacy</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/ToTt0G/nod-stop-alarm">GitHub</a>
+    </nav>
+  </header>
+</div>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Free, open-source stop alarm for Android</div>
+        <h1>Doze off. Nod wakes you before your stop.</h1>
+        <p class="lead">A GPS location alarm for trains, buses, trams, metros and ferries. Pick your stop, close your eyes, and Nod wakes you a few minutes before you arrive. Zero battery when idle, and your location never leaves the phone.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/ToTt0G/nod-stop-alarm/releases/latest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1zM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z"/></svg>
+            Download APK
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/ToTt0G/nod-stop-alarm">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            Star on GitHub
+          </a>
+        </div>
+        <p class="fine">Android 8.0+. MIT licensed. F-Droid and Google Play listings are planned.</p>
+      </div>
+      <div class="hero-img">
+        <img src="https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/docs/images/hero.png" alt="Nod on Android: a stop alarm that wakes you before your stop" width="1200" height="900" fetchpriority="high">
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="shots">
+        <figure class="shot"><img src="https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/fastlane/metadata/android/en-US/images/phoneScreenshots/01.png" alt="Nod home screen with a trip ready to start" loading="lazy" width="1080" height="2400"><figcaption>Never miss your stop</figcaption></figure>
+        <figure class="shot"><img src="https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/fastlane/metadata/android/en-US/images/phoneScreenshots/02.png" alt="Picking a station or drawing a custom alarm zone on the map" loading="lazy" width="1080" height="2400"><figcaption>Pick a station or draw your own zone</figcaption></figure>
+        <figure class="shot"><img src="https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/fastlane/metadata/android/en-US/images/phoneScreenshots/03.png" alt="Live Update on the Android lock screen showing distance to the stop" loading="lazy" width="1080" height="2400"><figcaption>Live on your lock screen</figcaption></figure>
+        <figure class="shot"><img src="https://raw.githubusercontent.com/ToTt0G/nod-stop-alarm/main/fastlane/metadata/android/en-US/images/phoneScreenshots/04.png" alt="Full-screen wake-up alarm with slide to dismiss" loading="lazy" width="1080" height="2400"><figcaption>Wakes you gently, right on time</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Set it and sleep</h2>
+      <p class="muted">One search, one tap, and you're covered for the whole ride. Nod does one thing well and then gets out of the way.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div>
+          <h3>Pick your stop</h3>
+          <p>Search any station, stop or city worldwide, powered by OpenStreetMap. Or drop a pin and drag the zone from 100 m to 20 km.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Wake by distance or time</h3>
+          <p>Ring on entering the zone, or N minutes before arrival calculated from your live speed. A soft heads-up arrives about two minutes early.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></div>
+          <h3>Wakes you your way</h3>
+          <p>Alarm, vibration only, or silent. The volume ramps up gently, and the full-screen lock-screen alarm dismisses with a slide.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 18h6"/></svg></div>
+          <h3>Live on your lock screen</h3>
+          <p>On Android 16, the Live Update shows distance and ETA on the lock screen and always-on display, with a status-bar chip and an End trip button. Older Android gets a regular ongoing notification.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1"/><rect x="17" y="14" width="4" height="6" rx="1"/></svg></div>
+          <h3>Headphone-aware</h3>
+          <p>With headphones in, the alarm plays only in your ears and your music pauses. A spoken heads-up plays over your music, and the earbud button means "I'm awake".</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></div>
+          <h3>Widgets and shortcuts</h3>
+          <p>Journey, Ring and Quick stop widgets update live during a trip, also on the lock screen where supported. Plus a Quick Settings tile and launcher shortcuts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="battery">
+    <div class="wrap">
+      <h2>Light on battery, silent on data</h2>
+      <p class="muted">Most location alarms keep GPS awake for the whole ride and phone home with your position. Nod does neither.</p>
+      <div class="two">
+        <div class="panel">
+          <div class="stat">0%</div>
+          <h3>Battery when no trip is set</h3>
+          <ul>
+            <li><strong>Nothing runs in the background.</strong> No services, alarms, jobs or location requests until you start a trip.</li>
+            <li><strong>Adaptive checks during a trip.</strong> Every few minutes via Wi-Fi and cell positioning when you're far away, then GPS only in the final stretch.</li>
+            <li><strong>Widgets render with no background jobs.</strong></li>
+            <li>Every claim has a script you can rerun: see <a href="https://github.com/ToTt0G/nod-stop-alarm/blob/main/perf/README.md">perf/README.md</a>.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="stat">0</div>
+          <h3>Accounts, ads, trackers</h3>
+          <ul>
+            <li><strong>No account, no ads, no tracking, no analytics.</strong></li>
+            <li><strong>Your location never leaves the phone.</strong> It is compared with your stop on-device and nowhere else.</li>
+            <li><strong>Only two things touch the network:</strong> place search (Photon, OpenStreetMap data) and map tiles (OpenFreeMap). Neither carries your position.</li>
+            <li>Open source under the MIT license. Read the <a href="https://github.com/ToTt0G/nod-stop-alarm/blob/main/PRIVACY.md">privacy policy</a>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <details>
+        <summary>Is there an app that wakes me up at my bus stop?</summary>
+        <p>Yes. Nod is a free Android stop alarm. Search your bus stop or station, start the trip, and Nod wakes you when you enter the zone around the stop or a set number of minutes before you arrive. It works for buses, trains, trams, metros and ferries.</p>
+      </details>
+      <details>
+        <summary>How does a train stop alarm work?</summary>
+        <p>Nod checks your location during the trip and compares it with the stop you picked. Far from the stop it checks every few minutes using Wi-Fi and cell positioning; in the final stretch it switches to GPS. When you enter the zone, or when your live speed says you are N minutes away, it rings a full-screen alarm over the lock screen, with a soft heads-up about two minutes earlier.</p>
+      </details>
+      <details>
+        <summary>Is Nod a GPS destination alarm for any location, not just stations?</summary>
+        <p>Yes. You can search any station, stop or city worldwide, or drop a pin anywhere on the map and drag the alarm zone from 100 m to 20 km. It works as a general location alarm for Android.</p>
+      </details>
+      <details>
+        <summary>Will I still wake up if I fall asleep on the train with headphones in?</summary>
+        <p>Yes. With headphones connected, the alarm plays only in your ears and your music pauses. A spoken heads-up plays over your music before the alarm, and pressing the earbud button tells Nod you are awake.</p>
+      </details>
+      <details>
+        <summary>Does a location alarm drain the battery?</summary>
+        <p>Nod uses zero battery when no trip is set: no background services, alarms, jobs or location. During a trip it checks location adaptively, every few minutes via Wi-Fi and cell when far away, and GPS only in the final stretch. Widgets render with no background jobs.</p>
+      </details>
+      <details>
+        <summary>Does Nod track me or need an account?</summary>
+        <p>No. There is no account, no ads, no tracking and no analytics. Your location never leaves the phone. The only network use is place search (Photon, OpenStreetMap data) and map tiles (OpenFreeMap). The code is open source under the MIT license.</p>
+      </details>
+      <details lang="sv">
+        <summary>Finns det en väckarklocka för hållplatsen på Android?</summary>
+        <p>Ja. Nod är ett gratis hållplatsalarm med öppen källkod för Android. Sök din station eller hållplats, starta resan och somna. Nod väcker dig när du kommer in i zonen eller ett valt antal minuter före ankomst. Appen finns på svenska och engelska, använder noll batteri när ingen resa är satt och skickar aldrig din position någonstans.</p>
+      </details>
+      <details>
+        <summary>Where can I download Nod?</summary>
+        <p>Download the APK from <a href="https://github.com/ToTt0G/nod-stop-alarm/releases/latest">GitHub Releases</a>. F-Droid, IzzyOnDroid and Google Play listings are planned. Nod requires Android 8.0 or later; lock-screen Live Updates need Android 16.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div>Nod is free and open source under the MIT license. English and Swedish.</div>
+    <div>
+      <a href="https://github.com/ToTt0G/nod-stop-alarm">Source</a> ·
+      <a href="https://github.com/ToTt0G/nod-stop-alarm/releases/latest">Releases</a> ·
+      <a href="https://github.com/ToTt0G/nod-stop-alarm/blob/main/PRIVACY.md">Privacy</a> ·
+      <a href="https://github.com/ToTt0G/nod-stop-alarm/issues">Issues</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

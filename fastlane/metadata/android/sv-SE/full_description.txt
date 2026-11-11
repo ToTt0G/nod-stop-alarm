@@ -1,0 +1,44 @@
+Slumra till. Nod väcker dig före din hållplats.
+
+Nod är ett gratis hållplatsalarm med öppen källkod för resor med tåg, buss, spårvagn, tunnelbana och färja. Välj din destination, blunda, och Nod väcker dig några minuter innan du är framme. En väckarklocka för hållplatsen, byggd för en enda sak: att du aldrig mer ska missa din station.
+
+VÄLJ DIN HÅLLPLATS
+- Sök vilken station, hållplats eller stad som helst i hela världen (OpenStreetMap-data).
+- Eller släpp en nål på kartan och dra zonen från 100 m till 20 km.
+- Sparade platser och historik låter dig starta en resa med ett tryck.
+
+VÄCKER DIG I RÄTT TID
+- Väck när du kommer in i zonen, eller ett valt antal minuter före ankomst baserat på din aktuella hastighet.
+- Larm, bara vibration eller tyst. Volymen stiger mjukt.
+- En försiktig förvarning ungefär 2 minuter före det riktiga larmet.
+- Ett helskärmslarm över låsskärmen, svep för att stänga av.
+
+LIVE PÅ LÅSSKÄRMEN
+- På Android 16 visar Live-uppdateringen avstånd och ankomsttid på låsskärmen och always-on-displayen, med en chip i statusfältet och en knapp för att avsluta resan.
+- På äldre Android-versioner håller en vanlig pågående avisering dig uppdaterad.
+
+HÖRLURAR I? INGA PROBLEM
+- Larmet spelas bara i dina öron och musiken pausas.
+- En talad förvarning spelas över musiken.
+- Tryck på hörlursknappen för att säga "jag är vaken".
+
+WIDGETAR OCH GENVÄGAR
+- Widgetarna Resa, Ring och Snabbstopp uppdateras live under resan, även på låsskärmen där det stöds.
+- En snabbinställningsruta och genvägar i startskärmen för dina vanligaste hållplatser.
+
+NOLL BATTERI NÄR INGEN RESA ÄR SATT
+- Ingen resa betyder inga bakgrundstjänster, inga larm, inga jobb och ingen platsanvändning.
+- Under en resa kontrollerar Nod din position adaptivt: med några minuters mellanrum via Wi-Fi och mobilnät när du är långt bort, och GPS först på slutsträckan.
+- Widgetarna ritas utan bakgrundsjobb.
+
+PRIVAT FRÅN GRUNDEN
+- Inget konto, inga annonser, ingen spårning, ingen analys.
+- Din position lämnar aldrig telefonen.
+- Den enda nätverksanvändningen är platssökning och kartbilder.
+- Öppen källkod under MIT-licens.
+
+Nod passar pendlare som tar en tupplur på tåget, nattbussresenärer, långresenärer och alla som försvinner in i en bok eller en podd. Sätt ett destinationslarm en gång och slappna av fram till din hållplats.
+
+Finns på svenska och engelska. Kräver Android 8.0 eller senare. Live-uppdateringar på låsskärmen kräver Android 16.
+
+Källkod: https://github.com/ToTt0G/nod-stop-alarm

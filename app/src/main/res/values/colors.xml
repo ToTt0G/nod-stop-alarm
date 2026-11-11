@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nod_ink">#0E0F11</color>
+    <color name="nod_paper">#F5F4EF</color>
+    <color name="nod_lime">#C8F55A</color>
+    <color name="nod_lime_deep">#5E8C00</color>
+</resources>
