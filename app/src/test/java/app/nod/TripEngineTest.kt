@@ -116,4 +116,23 @@ class TripEngineTest {
         val s = engine.onFix(walked.copy(timeMs = walked.timeMs + 5_000)).first
         assertThat(s.travelSpeedMps).isEqualTo(0.0)
     }
+
+    @Test fun `travel average follows a change of pace`() {
+        val engine = TripEngine(TripPlan(dest))
+        // 20 min at 30 m/s (open line), a 2 min stop, then 10 min at 12 m/s (into the city).
+        var t = 0L
+        var remaining = 60_000.0
+        fun fix(v: Float? = null): Fix = Geo.offset(dest.lat, dest.lon, remaining, 180.0).let { Fix(it.lat, it.lon, 8f, v, t) }
+        engine.onFix(fix())
+        repeat(240) { remaining -= 30.0 * 5; t += 5_000; engine.onFix(fix()) }
+        repeat(24) { t += 5_000; engine.onFix(fix(0f)) }
+        val afterStop = engine.onFix(fix(0f).copy(timeMs = t + 5_000)).first
+        // The stop doesn't change what was learned.
+        assertThat(afterStop.travelSpeedMps).isWithin(0.5).of(30.0)
+        t += 5_000
+        var last = afterStop
+        repeat(120) { remaining -= 12.0 * 5; t += 5_000; last = engine.onFix(fix()).first }
+        // A whole-trip average would still say 24 m/s; the estimate has switched to the new pace.
+        assertThat(last.travelSpeedMps).isWithin(0.5).of(12.0)
+    }
 }
