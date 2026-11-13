@@ -23,7 +23,11 @@ import app.nod.ui.nav.destinationOrNull
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
@@ -67,6 +71,19 @@ class ZoneViewModel @Inject constructor(
     private val _ui = MutableStateFlow(ZoneUi())
     val ui: StateFlow<ZoneUi> = _ui.asStateFlow()
     private var reverseJob: Job? = null
+    private val permissionTick = MutableStateFlow(0)
+
+    /**
+     * Where you are, for the dot on the map. Location updates run only while the screen collects
+     * this (it stops a few seconds after the app leaves the foreground).
+     */
+    @OptIn(ExperimentalCoroutinesApi::class)
+    val me: StateFlow<GeoPoint?> = permissionTick
+        .flatMapLatest { location.live() }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(3_000), location.lastKnown)
+
+    /** A permission prompt came back: start the live dot if it was granted. */
+    fun onPermissionResult() = permissionTick.update { it + 1 }
 
     init {
         viewModelScope.launch {

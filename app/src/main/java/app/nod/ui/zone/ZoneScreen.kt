@@ -115,6 +115,7 @@ import app.nod.ui.components.SheetDetent
 import app.nod.ui.components.bounceClick
 import app.nod.ui.components.rememberHaptics
 import app.nod.ui.components.rememberMapSheetState
+import app.nod.ui.map.MeDot
 import app.nod.ui.map.NodMap
 import app.nod.ui.theme.NodMotion
 import app.nod.ui.theme.NodTheme
@@ -125,6 +126,7 @@ import org.maplibre.android.camera.CameraPosition
 import org.maplibre.android.camera.CameraUpdateFactory
 import org.maplibre.android.geometry.LatLng
 import org.maplibre.android.maps.MapLibreMap
+import org.maplibre.android.maps.Style
 import kotlin.math.hypot
 import kotlin.math.roundToInt
 
@@ -137,6 +139,7 @@ fun ZoneScreen(
     vm: ZoneViewModel = hiltViewModel(),
 ) {
     val ui by vm.ui.collectAsStateWithLifecycle()
+    val me by vm.me.collectAsStateWithLifecycle()
     val c = NodTheme.colors
     val context = LocalContext.current
     val density = LocalDensity.current
@@ -146,6 +149,7 @@ fun ZoneScreen(
     val sheet = rememberMapSheetState()
 
     var map by remember { mutableStateOf<MapLibreMap?>(null) }
+    var style by remember { mutableStateOf<Style?>(null) }
     var centerPx by remember { mutableStateOf(Offset.Unspecified) }
     var metersPerPx by remember { mutableFloatStateOf(0f) }
     var moving by remember { mutableStateOf(false) }
@@ -188,7 +192,7 @@ fun ZoneScreen(
         if (animate) m.animateCamera(update, 650) else m.moveCamera(update)
     }
 
-    val locLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { vm.locateMe() }
+    val locLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { vm.onPermissionResult(); vm.locateMe() }
     fun locate() {
         val ok = ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == android.content.pm.PackageManager.PERMISSION_GRANTED ||
             ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) == android.content.pm.PackageManager.PERMISSION_GRANTED
@@ -219,6 +223,11 @@ fun ZoneScreen(
         measure(m)
     }
 
+    LaunchedEffect(style, me) {
+        val s = style ?: return@LaunchedEffect
+        me?.let { MeDot.set(s, it.lat, it.lon) }
+    }
+
     val permissions = remember {
         buildList {
             add(Manifest.permission.ACCESS_FINE_LOCATION)
@@ -227,6 +236,7 @@ fun ZoneScreen(
         }.toTypedArray()
     }
     val launcher = rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { res ->
+        vm.onPermissionResult()
         val loc = res[Manifest.permission.ACCESS_FINE_LOCATION] == true || res[Manifest.permission.ACCESS_COARSE_LOCATION] == true
         if (loc) { vm.start(pinName); onStarted() } else showPermissionDialog = true
     }
@@ -261,6 +271,10 @@ fun ZoneScreen(
                     }
                 }
                 map = m
+            },
+            onStyle = { _, s ->
+                MeDot.install(s)
+                style = s
             },
         )
 

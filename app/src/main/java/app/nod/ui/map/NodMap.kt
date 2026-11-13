@@ -139,18 +139,32 @@ fun NodMap(
     AndroidView(factory = { mapView }, modifier = modifier)
 }
 
+/** The "you are here" dot: a soft halo under a blue dot with a white rim. */
+object MeDot {
+    private const val ME = "nod-me"
+
+    /** Adds the source and layers on top of whatever the style has so far. Call once per style. */
+    fun install(style: Style) {
+        style.addSource(GeoJsonSource(ME))
+        style.addLayer(CircleLayer("$ME-halo", ME).withProperties(PropertyFactory.circleRadius(18f), PropertyFactory.circleColor(Expression.color(AColor.parseColor("#7CC4FF"))), PropertyFactory.circleOpacity(0.22f)))
+        style.addLayer(CircleLayer("$ME-dot", ME).withProperties(PropertyFactory.circleRadius(7f), PropertyFactory.circleColor(AColor.parseColor("#3A9BFF")), PropertyFactory.circleStrokeColor(AColor.WHITE), PropertyFactory.circleStrokeWidth(3f)))
+    }
+
+    fun set(style: Style, lat: Double, lon: Double) {
+        style.getSourceAs<GeoJsonSource>(ME)?.setGeoJson(Feature.fromGeometry(Point.fromLngLat(lon, lat)))
+    }
+}
+
 /** Custom layers used on the live trip map. */
 object TripLayers {
     private const val ZONE = "nod-zone"
     private const val ROUTE = "nod-route"
-    private const val ME = "nod-me"
     private const val DEST = "nod-dest"
 
     fun install(style: Style, zone: Color, ink: Color, isDark: Boolean) {
         val z = zone.toArgb()
         style.addSource(GeoJsonSource(ZONE))
         style.addSource(GeoJsonSource(ROUTE))
-        style.addSource(GeoJsonSource(ME))
         style.addSource(GeoJsonSource(DEST))
         style.addLayer(FillLayer("$ZONE-fill", ZONE).withProperties(PropertyFactory.fillColor(z), PropertyFactory.fillOpacity(if (isDark) 0.14f else 0.18f)))
         style.addLayer(LineLayer("$ZONE-line", ZONE).withProperties(PropertyFactory.lineColor(z), PropertyFactory.lineWidth(2.5f)))
@@ -164,8 +178,7 @@ object TripLayers {
             ),
         )
         style.addLayer(CircleLayer("$DEST-dot", DEST).withProperties(PropertyFactory.circleRadius(5f), PropertyFactory.circleColor(z), PropertyFactory.circleStrokeColor(ink.toArgb()), PropertyFactory.circleStrokeWidth(2f)))
-        style.addLayer(CircleLayer("$ME-halo", ME).withProperties(PropertyFactory.circleRadius(18f), PropertyFactory.circleColor(Expression.color(AColor.parseColor("#7CC4FF"))), PropertyFactory.circleOpacity(0.22f)))
-        style.addLayer(CircleLayer("$ME-dot", ME).withProperties(PropertyFactory.circleRadius(7f), PropertyFactory.circleColor(AColor.parseColor("#3A9BFF")), PropertyFactory.circleStrokeColor(AColor.WHITE), PropertyFactory.circleStrokeWidth(3f)))
+        MeDot.install(style)
     }
 
     fun setZone(style: Style, lat: Double, lon: Double, radiusM: Double) {
@@ -175,7 +188,7 @@ object TripLayers {
     }
 
     fun setMe(style: Style, lat: Double, lon: Double, destLat: Double, destLon: Double) {
-        style.getSourceAs<GeoJsonSource>(ME)?.setGeoJson(Feature.fromGeometry(Point.fromLngLat(lon, lat)))
+        MeDot.set(style, lat, lon)
         style.getSourceAs<GeoJsonSource>(ROUTE)?.setGeoJson(
             FeatureCollection.fromFeatures(
                 listOf(Feature.fromGeometry(LineString.fromLngLats(listOf(Point.fromLngLat(lon, lat), Point.fromLngLat(destLon, destLat))))),
