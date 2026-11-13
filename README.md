@@ -20,14 +20,14 @@ Nod is a free, open-source stop alarm for Android. Pick your train, bus, tram, m
 Falling asleep on the train shouldn't mean waking up two towns too far. Most "don't miss my stop" apps drain your battery, ask for an account, or sell your location. Nod does one thing well: it wakes you at your stop, quietly and reliably, and then gets out of the way.
 
 - **Set it and sleep.** One search, one tap, and you're covered for the whole ride.
-- **Wakes you on time.** By distance (when you enter the zone) or by time (N minutes before arrival, from your live speed).
+- **Wakes you on time.** By distance (when you enter the zone) or by time (N minutes before arrival, from your average speed while moving, so stops along the way don't throw it off).
 - **Zero battery when idle.** No trip set means no background services, no alarms, no location.
 - **Private by design.** No account, no ads, no tracking, no analytics. Your location never leaves the phone.
 
 ## Key features
 
 - **Pick your stop.** Search any station, stop or city worldwide (OpenStreetMap/Photon), or drop a pin and drag the zone from 100 m to 20 km.
-- **Choose when it wakes you.** On entering the zone, or N minutes before arrival based on your live speed.
+- **Choose when it wakes you.** On entering the zone, or N minutes before arrival based on your average speed while moving.
 - **Choose how it wakes you.** Alarm, vibration only, or silent. The volume ramps up gently, and a soft heads-up arrives about 2 minutes early.
 - **Full-screen lock-screen alarm** with slide to dismiss.
 - **Live on your lock screen.** On Android 16 the Live Update shows on the lock screen and always-on display, with a status-bar chip and an End trip button. Older Android versions get a regular ongoing notification.

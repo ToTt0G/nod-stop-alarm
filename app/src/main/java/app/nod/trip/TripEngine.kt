@@ -18,8 +18,15 @@ data class LiveStats(
     val distanceM: Double,
     /** Distance until the zone edge; 0 once inside. */
     val toZoneM: Double,
+    /** Current speed, smoothed over the last few fixes. Drops to 0 at a stop. */
     val speedMps: Double,
-    /** Seconds until the alarm is expected to fire, null when we can't tell yet (standing still). */
+    /**
+     * Average speed while actually moving, since the trip started: time spent standing still (at a
+     * station, a bus stop, a red light) is left out. This is what arrival estimates use, so they
+     * don't jump around every time the vehicle stops. 0 until enough movement has been seen.
+     */
+    val travelSpeedMps: Double = 0.0,
+    /** Seconds until the alarm is expected to fire, null until we have seen enough movement. */
     val alarmInSec: Double?,
     /** 0..1 journey progress towards the alarm point. */
     val progress: Float,
@@ -42,6 +49,8 @@ class TripEngine(private val plan: TripPlan) {
     private var startToZone: Double? = plan.startToZoneM
     private var lastFix: Fix? = null
     private var speed = 0.0
+    private var movingM = 0.0
+    private var movingSec = 0.0
     private var insideStreak = 0
     private var timeStreak = 0
     private var fixCount = 0
@@ -61,14 +70,17 @@ class TripEngine(private val plan: TripPlan) {
         val start = startToZone ?: toZone.also { startToZone = it }
         val progress = if (start <= 1.0) 1f else (1.0 - toZone / start).coerceIn(0.0, 1.0).toFloat()
 
-        val moving = speed >= MOVING_MPS
-        val etaDest = if (moving) distance / speed else null
+        // Estimates use the average speed while moving, so stops along the way don't stall them. Until
+        // there's enough movement for an average, fall back to the current speed.
+        val travel = travelSpeed()
+        val etaSpeed = travel ?: speed.takeIf { it >= MOVING_MPS }
+        val etaDest = etaSpeed?.let { distance / it }
         val alarmIn: Double? = when {
             arrived -> 0.0
-            !moving -> null
+            etaSpeed == null -> null
             plan.triggerMode == TriggerMode.TIME ->
-                minOf((etaDest!! - plan.minutesBefore * 60.0), toZone / speed).coerceAtLeast(0.0)
-            else -> toZone / speed
+                minOf((etaDest!! - plan.minutesBefore * 60.0), toZone / etaSpeed).coerceAtLeast(0.0)
+            else -> toZone / etaSpeed
         }
 
         val events = mutableListOf<TripEvent>()
@@ -97,6 +109,7 @@ class TripEngine(private val plan: TripPlan) {
             distanceM = distance,
             toZoneM = toZone,
             speedMps = speed,
+            travelSpeedMps = travel ?: 0.0,
             alarmInSec = if (arrived) 0.0 else alarmIn,
             progress = if (arrived) 1f else progress,
             accuracyM = fix.accuracyM,
@@ -120,13 +133,24 @@ class TripEngine(private val plan: TripPlan) {
         val fromDelta: Double? = if (prev != null && fix.timeMs > prev.timeMs) {
             val d = Geo.distance(prev.lat, prev.lon, fix.lat, fix.lon)
             val dt = (fix.timeMs - prev.timeMs) / 1000.0
-            if (d > (fix.accuracyM + prev.accuracyM) * 0.5 && dt >= 0.5) d / dt else null
+            val v = if (d > (fix.accuracyM + prev.accuracyM) * 0.5 && dt >= 0.5) d / dt else null
+            // Only stretches where we were really travelling count towards the average; standing still
+            // (and walking pace, e.g. to the platform) is left out.
+            if (v != null && v >= TRAVEL_MIN_MPS && v < MAX_PLAUSIBLE_MPS) {
+                movingM += d
+                movingSec += dt
+            }
+            v
         } else null
         val measured = fromDelta ?: fix.speedMps?.toDouble()?.takeIf { it >= 0 }
         if (measured != null && measured < MAX_PLAUSIBLE_MPS) {
             speed = if (speed == 0.0) measured else speed * (1 - SMOOTHING) + measured * SMOOTHING
         }
     }
+
+    /** Average speed over the time spent moving, once there's enough of it to trust. */
+    private fun travelSpeed(): Double? =
+        if (movingSec >= TRAVEL_MIN_SEC && movingM >= TRAVEL_MIN_M) movingM / movingSec else null
 
     /**
      * How often to ask for location. Each check may cover at most a quarter of the remaining way to
@@ -166,6 +190,11 @@ class TripEngine(private val plan: TripPlan) {
 
     companion object {
         const val MOVING_MPS = 1.5
+        /** Slower than this (about 9 km/h) doesn't count towards the travel average: stopped or walking. */
+        const val TRAVEL_MIN_MPS = 2.5
+        /** Movement needed before the travel average replaces the current speed. */
+        const val TRAVEL_MIN_SEC = 15.0
+        const val TRAVEL_MIN_M = 100.0
         const val MAX_PLAUSIBLE_MPS = 140.0 // ~500 km/h; high-speed rail with margin
         const val SMOOTHING = 0.35
         const val HEADS_UP_SEC = 120.0

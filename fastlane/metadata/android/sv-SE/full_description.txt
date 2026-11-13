@@ -8,7 +8,7 @@ VÄLJ DIN HÅLLPLATS
 - Sparade platser och historik låter dig starta en resa med ett tryck.
 
 VÄCKER DIG I RÄTT TID
-- Väck när du kommer in i zonen, eller ett valt antal minuter före ankomst baserat på din aktuella hastighet.
+- Väck när du kommer in i zonen, eller ett valt antal minuter före ankomst baserat på din snittfart när du rör dig.
 - Larm, bara vibration eller tyst. Volymen stiger mjukt.
 - En försiktig förvarning ungefär 2 minuter före det riktiga larmet.
 - Ett helskärmslarm över låsskärmen, svep för att stänga av.

@@ -152,8 +152,8 @@ object TripNotifications {
             else -> context.getString(R.string.notif_waiting_zone)
         }
         // Where the 2-minute heads-up lands on the bar, based on current speed.
-        val headsUpFrac = if (live.speedMps >= TripEngine.MOVING_MPS && live.startToZoneM > 0) {
-            (1.0 - TripEngine.HEADS_UP_SEC * live.speedMps / live.startToZoneM).coerceIn(0.5, 0.95)
+        val headsUpFrac = if (live.travelSpeedMps >= TripEngine.MOVING_MPS && live.startToZoneM > 0) {
+            (1.0 - TripEngine.HEADS_UP_SEC * live.travelSpeedMps / live.startToZoneM).coerceIn(0.5, 0.95)
         } else 0.85
         val countdown = if (alarmIn != null && alarmIn > 0 && state.phase != TripPhase.ALARM) {
             val at = System.currentTimeMillis() + (alarmIn * 1000).toLong()

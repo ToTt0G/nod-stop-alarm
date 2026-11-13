@@ -76,7 +76,7 @@
     <string name="wake_me">Väck mig</string>
     <string name="trigger_zone">Vid zonen</string>
     <string name="trigger_time">Minuter innan</string>
-    <string name="trigger_time_hint">Använder din aktuella hastighet. Zonen finns kvar som skyddsnät.</string>
+    <string name="trigger_time_hint">Använder din snittfart när du rör dig, så stopp påverkar inte. Zonen finns kvar som skyddsnät.</string>
     <string name="zone_radius">Zonens storlek</string>
     <string name="style_alarm">Larm</string>
     <string name="style_vibrate">Vibration</string>

@@ -77,7 +77,7 @@
     <string name="wake_me">Wake me</string>
     <string name="trigger_zone">Entering zone</string>
     <string name="trigger_time">Minutes before</string>
-    <string name="trigger_time_hint">Uses your live speed. The zone still acts as a safety net.</string>
+    <string name="trigger_time_hint">Uses your average speed while moving, so stops don\'t throw it off. The zone still acts as a safety net.</string>
     <string name="zone_radius">Zone size</string>
     <string name="style_alarm">Alarm</string>
     <string name="style_vibrate">Vibrate</string>

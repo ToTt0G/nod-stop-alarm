@@ -8,7 +8,7 @@ PICK YOUR STOP
 - Saved places and history let you start a trip in one tap.
 
 WAKES YOU RIGHT ON TIME
-- Wake on entering the zone, or a set number of minutes before arrival based on your live speed.
+- Wake on entering the zone, or a set number of minutes before arrival based on your average speed while moving.
 - Alarm, vibration only, or silent. The volume ramps up gently.
 - A soft heads-up about 2 minutes before the real alarm.
 - A full-screen alarm over the lock screen with slide to dismiss.

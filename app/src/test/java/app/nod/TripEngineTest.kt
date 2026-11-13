@@ -76,4 +76,44 @@ class TripEngineTest {
         val s2 = resumed.onFix(Fix(mid.lat, mid.lon, 8f, null, 0)).first
         assertThat(s2.progress).isWithin(0.02f).of(0.5f)
     }
+
+    /** A bus: [legs] stretches of driving at [mps] for [driveSec], each followed by [stopSec] at a stop. */
+    private fun stopAndGo(startM: Double, mps: Double, driveSec: Int, stopSec: Int, legs: Int, stepSec: Int = 5): List<Fix> {
+        val out = mutableListOf<Fix>()
+        var t = 0L
+        var remaining = startM
+        // Stationary fixes report 0 m/s, as GNSS chips do at a standstill.
+        fun fixAt(v: Float?) = Geo.offset(dest.lat, dest.lon, remaining, 180.0).let { Fix(it.lat, it.lon, 8f, v, t) }
+        out += fixAt(null)
+        repeat(legs) {
+            repeat(driveSec / stepSec) { remaining -= mps * stepSec; t += stepSec * 1000L; out += fixAt(null) }
+            repeat(stopSec / stepSec) { t += stepSec * 1000L; out += fixAt(0f) }
+        }
+        return out
+    }
+
+    @Test fun `stops don't drag the travel average down`() {
+        val engine = TripEngine(TripPlan(dest))
+        // Half the time standing at stops; the average should still be the driving speed.
+        val last = stopAndGo(10_000.0, 12.0, driveSec = 60, stopSec = 60, legs = 4).map { engine.onFix(it).first }.last()
+        assertThat(last.travelSpeedMps).isWithin(0.5).of(12.0)
+    }
+
+    @Test fun `estimate holds steady while standing at a stop`() {
+        val engine = TripEngine(TripPlan(dest))
+        // End standing still: the current speed decays towards 0, the estimate shouldn't.
+        val stats = stopAndGo(10_000.0, 12.0, driveSec = 60, stopSec = 60, legs = 3).map { engine.onFix(it).first }
+        val last = stats.last()
+        assertThat(last.speedMps).isLessThan(TripEngine.MOVING_MPS)
+        assertThat(last.alarmInSec).isNotNull()
+        assertThat(last.alarmInSec!!).isWithin(5.0).of(last.toZoneM / 12.0)
+    }
+
+    @Test fun `walking to the platform doesn't count as travel`() {
+        val engine = TripEngine(TripPlan(dest))
+        ride(10_000.0, 1.3).take(40).forEach { engine.onFix(it) }
+        val walked = ride(10_000.0, 1.3).take(40).last()
+        val s = engine.onFix(walked.copy(timeMs = walked.timeMs + 5_000)).first
+        assertThat(s.travelSpeedMps).isEqualTo(0.0)
+    }
 }
