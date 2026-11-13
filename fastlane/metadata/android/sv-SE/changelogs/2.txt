@@ -1,0 +1,1 @@
+- När du väljer en zon på kartan visar en blå prick var du är. Platsen används bara medan den skärmen är öppen, så det drar inget batteri i övrigt.

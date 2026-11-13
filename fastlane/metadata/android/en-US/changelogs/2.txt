@@ -1,0 +1,1 @@
+- The map now shows a blue dot for where you are when you pick a zone. Your location is only used while that screen is open, so it costs no battery the rest of the time.
