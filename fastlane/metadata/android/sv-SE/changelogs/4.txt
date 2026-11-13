@@ -1,0 +1,1 @@
+- Ankomsttiden hänger nu med när farten ändras: om tåget går i 200 km/h mellan städerna och 40 km/h genom dem anpassas uppskattningen till den nya farten inom några minuter, i stället för att räkna på snittet för hela resan. Tid då du står still räknas fortfarande inte med.

@@ -1,0 +1,1 @@
+- Arrival estimates now follow changes of pace: when a train drops from 200 km/h between cities to 40 km/h through them, the estimate switches to the new pace within a few minutes instead of averaging the whole trip. Time spent standing still is still left out.
