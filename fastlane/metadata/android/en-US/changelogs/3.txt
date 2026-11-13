@@ -1,0 +1,1 @@
+- Arrival estimates, for both the countdown and the "minutes before" alarm, now use your average speed while moving since the trip started. Time spent standing at stations, stops and red lights is left out, so the estimate no longer disappears every time the bus or train stops.

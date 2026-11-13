@@ -1,0 +1,1 @@
+- Beräknad ankomsttid, både i nedräkningen och för larmet "Minuter innan", bygger nu på din snittfart under resan när du faktiskt rör dig. Tiden du står still vid stationer, hållplatser och rödljus räknas inte, så uppskattningen försvinner inte längre varje gång bussen eller tåget stannar.
